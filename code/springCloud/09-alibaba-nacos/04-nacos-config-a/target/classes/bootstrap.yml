@@ -1,0 +1,19 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+
+# 应用名称
+spring:
+  application:
+    name: nacos-config-a
+  # 配置项目对用的配置文件的地址
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        prefix: nacos-config-a  # 指定读那个配置文件
+        file-extension: yml  # 文件类型
+

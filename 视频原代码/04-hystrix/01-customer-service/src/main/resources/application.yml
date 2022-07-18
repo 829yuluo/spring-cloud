@@ -1,0 +1,44 @@
+server:
+    port: 8081
+spring:
+    application:
+        name: customer-service
+eureka:
+    client:
+        service-url:
+            defaultZone: http://47.100.238.122:8761/eureka
+    instance:
+        hostname: localhost
+        instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+feign:
+    hystrix:
+        enabled: true  # 在cloud的F版以前 是默认开启的 但是因为后来有了其他的熔断组件
+hystrix:    #hystrix的全局控制
+    command:
+        default:    #default是全局控制，也可以换成单个方法控制，把default换成方法名即可
+            circuitBreaker:
+                enabled: true   #开启断路器
+                requestVolumeThreshold: 3   #失败次数（阀值）  10次
+                sleepWindowInMilliseconds: 20000    #窗口时间
+                errorThresholdPercentage: 60    #失败率
+            execution:
+                isolation:
+                    Strategy: thread  #隔离方式 thread线程隔离集合和semaphore信号量隔离级别
+                    thread:
+                        timeoutInMilliseconds: 3000 #调用超时时长
+            fallback:
+                isolation:
+                    semaphore:
+                        maxConcurrentRequests: 1000 #信号量隔离级别最大并发数
+ribbon:
+    ReadTimeout: 5000   #要结合feign的底层ribbon调用的时长
+    ConnectTimeout: 5000
+#隔离方式 两种隔离方式  thread线程池 按照group（10个线程）划分服务提供者，用户请求的线程和做远程的线程不一样
+# 好处 当B服务调用失败了 或者请求B服务的量太大了 不会对C服务造成影响 用户访问比较大的情况下使用比较好  异步的方式
+# 缺点 线程间切换开销大，对机器性能影响
+# 应用场景 调用第三方服务 并发量大的情况下
+# SEMAPHORE信号量隔离 每次请进来 有一个原子计数器 做请求次数的++  当请求完成以后 --
+# 好处 对cpu开销小
+# 缺点 并发请求不易太多 当请求过多 就会拒绝请求 做一个保护机制
+# 场景 使用内部调用 ，并发小的情况下
+# 源码入门  HystrixCommand  AbstractCommand HystrixThreadPool

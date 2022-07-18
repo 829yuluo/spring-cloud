@@ -1,0 +1,18 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: customer-servie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+# \u5F00\u542FHystrix\u7684\u529F\u80FD
+# \u5728spring\u7684F\u7248\u672C\u4EE5\u524D\uFF0C\u9ED8\u8BA4\u662F\u5F00\u542F\u7684\uFF0CF\u7248\u672C\u4E4B\u540E\uFF0C\u5173\u95ED\uFF08\u56E0\u4E3A\u6709\u4E86\u5176\u4ED6\u7684\u7194\u65AD\u7EC4\u4EF6\uFF09
+feign:
+  hystrix:
+    enabled: true

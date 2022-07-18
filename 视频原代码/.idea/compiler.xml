@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="19-springcloud" />
+        <module name="project-domain" />
+        <module name="02-ribbon" />
+        <module name="05-admin-server" />
+        <module name="02-eureka-client-a" />
+        <module name="03-rest-template" />
+        <module name="02-consumer" />
+        <module name="01-order-service" />
+        <module name="02-eureka-client-b" />
+        <module name="03-Myfish" />
+        <module name="order-center" />
+        <module name="01-customer-service" />
+        <module name="03-gateway" />
+        <module name="03-teacher-service" />
+        <module name="03-openfeign" />
+        <module name="01-gateway-server" />
+        <module name="07-nacos" />
+        <module name="02-rent-car-service" />
+        <module name="01-eureka" />
+        <module name="user-center" />
+        <module name="01-eureka-server" />
+        <module name="01-eureka-server-b" />
+        <module name="01-eureka-server-c" />
+        <module name="02-nacos-client-b" />
+        <module name="02-login-service" />
+        <module name="02-user-service" />
+        <module name="04-hystrix" />
+        <module name="01-nacos-client-a" />
+        <module name="01-provider-b" />
+        <module name="01-provider-a" />
+        <module name="common-api" />
+        <module name="04-nacos-config-a" />
+        <module name="05-nacos-config-test" />
+        <module name="06-gateway" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-customer-service" options="-parameters" />
+      <module name="01-eureka-server" options="-parameters" />
+      <module name="01-eureka-server-b" options="-parameters" />
+      <module name="01-eureka-server-c" options="-parameters" />
+      <module name="01-gateway-server" options="-parameters" />
+      <module name="01-order-service" options="-parameters" />
+      <module name="01-provider-a" options="-parameters" />
+      <module name="01-provider-b" options="-parameters" />
+      <module name="02-consumer" options="-parameters" />
+      <module name="02-eureka-client-a" options="-parameters" />
+      <module name="02-eureka-client-b" options="-parameters" />
+      <module name="02-login-service" options="-parameters" />
+      <module name="02-rent-car-service" options="-parameters" />
+      <module name="02-user-service" options="-parameters" />
+      <module name="03-Myfish" options="-parameters" />
+      <module name="03-rest-template" options="-parameters" />
+      <module name="03-teacher-service" options="-parameters" />
+      <module name="04-feign-project" options="-parameters" />
+      <module name="05-admin-server" options="-parameters" />
+      <module name="common-api" options="-parameters" />
+      <module name="order-center" options="-parameters" />
+      <module name="project-domain" options="-parameters" />
+      <module name="user-center" options="-parameters" />
+    </option>
+  </component>
+</project>

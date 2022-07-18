@@ -1,0 +1,24 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: order-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      # 配置采样率，默认的采样比例为0.1， 即10%所设置的值介于0和1之间，1 表示全部采样
+      probability: 1
+      # 为了使用速率限制采样器，选择每秒间隔接受的trace量，最小值为1，最大值2,147,483,647(最大int值)
+      rate: 10
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+feign:
+  hystrix:
+    enabled: true

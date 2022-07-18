@@ -1,0 +1,12 @@
+server:
+    port: 8082
+spring:
+    application:
+        name: teacher-service
+eureka:
+    client:
+        service-url:
+            defaultZone: http://47.100.238.122:8761/eureka
+    instance:
+        hostname: localhost
+        instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}

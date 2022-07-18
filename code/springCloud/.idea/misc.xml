@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/01-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/01-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/02-eureka-client-a/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/03-eureka-client-b/pom.xml" />
+        <option value="$PROJECT_DIR$/02-restTemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/03-docker-boot/03-docker-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/04-ribbon/01-provider-a/pom.xml" />
+        <option value="$PROJECT_DIR$/04-ribbon/02-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/04-ribbon/01-provider-b/pom.xml" />
+        <option value="$PROJECT_DIR$/05-openFeign/pom.xml" />
+        <option value="$PROJECT_DIR$/05-openFeign/01-order-service-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/05-openFeign/02-user-service-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/06-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/06-hystrix/01-customer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/06-hystrix/02-rent-car-service/pom.xml" />
+        <option value="$PROJECT_DIR$/06-hystrix/03-simulatedhystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/06-hystrix/04-feign-project/pom.xml" />
+        <option value="$PROJECT_DIR$/07-admin-servers/pom.xml" />
+        <option value="$PROJECT_DIR$/08-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/08-gateway/01-login-service/pom.xml" />
+        <option value="$PROJECT_DIR$/08-gateway/02-gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/08-gateway/03-token-check/01-teacherLogin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/08-gateway/03-token-check/02-gateway-servers/pom.xml" />
+        <option value="$PROJECT_DIR$/08-gateway/03-token-check/03-teacher-service/pom.xml" />
+        <option value="$PROJECT_DIR$/09-alibaba-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/09-alibaba-nacos/02-nacos-client-b/pom.xml" />
+        <option value="$PROJECT_DIR$/09-alibaba-nacos/01-nacos-client-a/pom.xml" />
+        <option value="$PROJECT_DIR$/09-alibaba-nacos/03-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/09-alibaba-nacos/04-nacos-config-a/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/06-hystrix/04-feign-project/common-api/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

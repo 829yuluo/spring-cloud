@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.freemarker:freemarker:2.3.31">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../apache_maven/apache-maven-3.8.3-bin/apache-maven-3.8.3/maven_warehouse/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../apache_maven/apache-maven-3.8.3-bin/apache-maven-3.8.3/maven_warehouse/org/freemarker/freemarker/2.3.31/freemarker-2.3.31-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../apache_maven/apache-maven-3.8.3-bin/apache-maven-3.8.3/maven_warehouse/org/freemarker/freemarker/2.3.31/freemarker-2.3.31-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

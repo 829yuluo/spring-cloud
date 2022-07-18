@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: nacos-client-b
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery: # 这是和服务注册相关的配置 这里要写的是命名空间的id
+        namespace: 77d57d98-250a-40e9-9064-6465493ccc68
+        group: A_group # 往A组中注册
+        # 在nacos中默认的服务注册时的名字为应用名称，可以修改
+        # service: client-b
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+

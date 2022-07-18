@@ -1,0 +1,30 @@
+server:
+  # 网关一般是80
+  port: 80
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      # 只要加了依赖，默认开启
+#      enabled: true
+#      routes:
+#        - id: login-service-route   # 这个是路由的id，保持唯一即可
+#          uri: http://localhost:10010  # uri统一资源定位符  url：统一资源表示符
+#          predicates:
+#            - Path=/doLogin  # 匹配规则，只要path匹配上了就去uri转发。并且带上路径
+      discovery:
+        locator:
+          enabled: true   # 开启动态路由
+          lower-case-service-id: true   # eureka中的服务名全部是大写，这个是开启服务名称小写
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    registry-fetch-interval-seconds: 3   # 网关拉取服务列表的时间缩短
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}

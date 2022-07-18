@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service-provider
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+# \u9488\u5BF9\u670D\u52A1\u8D85\u65F6\u7684\u5904\u7406\u65B9\u6CD5\uFF0Cfeign\u7684\u9ED8\u8BA4\u7B49\u5F85\u65F6\u95F4\u662F1\u79D2\uFF0C
+# feign\u7684\u914D\u7F6E\u6587\u4EF6\u4E2D\u6CA1\u6709\u8D85\u65F6\u65F6\u95F4\u7684\u914D\u7F6E\uFF0C\u56E0\u4E3Afeign\u53EA\u662F\u5C01\u88C5\u4E86\u8FDC\u7A0B\u8C03\u7528\u7684\u529F\u80FD\uFF0C\u96C6\u6210\u4E86ribbon\uFF0C\u6240\u4EE5\u8981\u53BB\u4FEE\u6539ribbon\u7684\u8D85\u65F6\u65F6\u95F4\u914D\u7F6E
+ribbon:
+  ReadTimeout: 3000  # \u8C03\u7528\u8D85\u65F6 \u8BBE\u7F6E\u4E3A3\u79D2
+  ConnectTimeout: 3000 # \u94FE\u63A5\u670D\u52A1\u7684\u8D85\u65F6\u65F6\u95F4
+

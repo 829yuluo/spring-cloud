@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.guava:guava:30.0-jre">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../apache_maven/apache-maven-3.8.3-bin/apache-maven-3.8.3/maven_warehouse/com/google/guava/guava/30.0-jre/guava-30.0-jre.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../apache_maven/apache-maven-3.8.3-bin/apache-maven-3.8.3/maven_warehouse/com/google/guava/guava/30.0-jre/guava-30.0-jre-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../apache_maven/apache-maven-3.8.3-bin/apache-maven-3.8.3/maven_warehouse/com/google/guava/guava/30.0-jre/guava-30.0-jre-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

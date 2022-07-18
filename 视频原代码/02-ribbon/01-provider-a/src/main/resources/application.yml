@@ -1,0 +1,13 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: provider
+eureka:
+    client:
+        service-url:
+            defaultZone: http://47.100.238.122:8761/eureka
+    instance:
+        hostname: localhost
+        prefer-ip-address: true
+        instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}

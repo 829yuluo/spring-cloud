@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: nacos-client-a
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 77d57d98-250a-40e9-9064-6465493ccc68
+        group: A_group
+
+feign:
+  hystrix:
+    enabled: true

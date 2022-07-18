@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="01-login-service" />
+        <module name="project-domain" />
+        <module name="common-apis" />
+        <module name="03-docker-boot" />
+        <module name="02-eureka-client-a" />
+        <module name="02-consumer" />
+        <module name="order-center" />
+        <module name="01-customer-service" />
+        <module name="03-gateway" />
+        <module name="07-admin-servers" />
+        <module name="03-teacher-service" />
+        <module name="01-order-service-provider" />
+        <module name="02-user-service-provider" />
+        <module name="02-rent-car-service" />
+        <module name="03-eureka-client-b" />
+        <module name="03-simulatedhystrix" />
+        <module name="01-eureka" />
+        <module name="user-center" />
+        <module name="01-eureka-server" />
+        <module name="02-nacos-client-b" />
+        <module name="02-gateway-server" />
+        <module name="09-alibaba-nacos" />
+        <module name="05-openFeign" />
+        <module name="01-nacos-client-a" />
+        <module name="01-provider-a" />
+        <module name="01-teacherLogin-service" />
+        <module name="02-restTemplate" />
+        <module name="08-gateway" />
+        <module name="04-nacos-config-a" />
+        <module name="02-gateway-servers" />
+        <module name="provider-b" />
+        <module name="06-hystrix" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-provider-b" target="1.8" />
+      <module name="common-api" target="1.8" />
+      <module name="hystrix" target="1.8" />
+      <module name="nacos-client-a" target="1.8" />
+      <module name="ribbon" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-customer-service" options="-parameters" />
+      <module name="01-eureka-server" options="-parameters" />
+      <module name="01-login-service" options="-parameters" />
+      <module name="01-order-service-provider" options="-parameters" />
+      <module name="01-provider-a" options="-parameters" />
+      <module name="01-provider-b" options="-parameters" />
+      <module name="01-teacherLogin-service" options="-parameters" />
+      <module name="02-consumer" options="-parameters" />
+      <module name="02-eureka-client-a" options="-parameters" />
+      <module name="02-gateway-server" options="-parameters" />
+      <module name="02-gateway-servers" options="-parameters" />
+      <module name="02-rent-car-service" options="-parameters" />
+      <module name="02-restTemplate" options="-parameters" />
+      <module name="02-user-service-provider" options="-parameters" />
+      <module name="03-docker-boot" options="-parameters" />
+      <module name="03-eureka-client-b" options="-parameters" />
+      <module name="03-simulatedhystrix" options="-parameters" />
+      <module name="03-teacher-service" options="-parameters" />
+      <module name="04-feign-project" options="-parameters" />
+      <module name="05-openFeign" options="-parameters" />
+      <module name="06-hystrix" options="-parameters" />
+      <module name="07-admin-servers" options="-parameters" />
+      <module name="08-gateway" options="-parameters" />
+      <module name="09-alibaba-nacos" options="-parameters" />
+      <module name="common-api" options="-parameters" />
+      <module name="common-apis" options="-parameters" />
+      <module name="hystrix" options="-parameters" />
+      <module name="order-center" options="-parameters" />
+      <module name="project-domain" options="-parameters" />
+      <module name="provider-b" options="-parameters" />
+      <module name="user-center" options="-parameters" />
+    </option>
+  </component>
+</project>

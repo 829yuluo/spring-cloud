@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/01-eureka/01-eureka-server-b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/01-eureka/01-eureka-server-c/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/01-eureka/01-eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/01-eureka/02-eureka-client-a/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/01-eureka/02-eureka-client-b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/01-eureka/03-rest-template/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02-ribbon/01-provider-a/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02-ribbon/01-provider-b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02-ribbon/02-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/03-openfeign/01-order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/03-openfeign/02-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-hystrix/01-customer-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-hystrix/02-rent-car-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-hystrix/03-Myfish/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-hystrix/04-feign-project/common-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-hystrix/04-feign-project/order-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-hystrix/04-feign-project/project-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-hystrix/04-feign-project/user-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05-admin-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-gateway/01-gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-gateway/02-login-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-gateway/03-teacher-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/01-nacos-client-a/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/01-nacos-client-a/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/02-nacos-client-b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/02-nacos-client-b/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/03-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/03-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/04-nacos-config-a/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/04-nacos-config-a/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/05-nacos-config-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-nacos/05-nacos-config-test/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

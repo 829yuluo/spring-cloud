@@ -1,0 +1,42 @@
+server:
+    port: 80 # 网关一般是80
+spring:
+    application:
+        name: gateway-server
+    cloud:
+        gateway:
+            enabled: true # =只要加了依赖 默认开启
+            routes: # 如果一个服务里面有100个路径  如果我想做负载均衡 ??   动态路由
+                -   id: login-service-route  # 这个是路由的id 保持唯一即可
+                    #                    uri: http://localhost:8081   # uri统一资源定位符   url 统一资源标识符
+                    uri: lb://login-service   # uri统一资源定位符   url 统一资源标识符
+                    predicates: # 断言是给某一个路由来设定的一种匹配规则 默认不能作用在动态路由上
+                        - Path=/doLogin  # 匹配规则  只要你Path匹配上了/doLogin 就往 uri 转发 并且将路径带上
+                        - After=2022-03-22T08:42:59.521+08:00[Asia/Shanghai]
+                        - Method=GET,POST
+                    #                        - Query=name,admin.   #正则表达式的值
+                    filters:
+                        -   name: RequestRateLimiter  # 这个是过滤器的名称
+                            args: # 这个过滤器的参数
+                                key-resolver: '#{@apiKeyResolver}' # 通过spel表达式取 ioc容器中bean的值
+                                redis-rate-limiter.replenishRate: 1  # 生成令牌的速度
+                                redis-rate-limiter.burstCapacity: 3  # 桶容量
+            discovery:
+                locator:
+                    enabled: true  # 开启动态路由  开启通用应用名称 找到服务的功能
+                    lower-case-service-id: true  # 开启服务名称小写
+#            globalcors:
+#                corsConfigurations:
+#                    '[/**]':
+#                        allowCredentials: true  # 可以携带cookie
+#                        allowedHeaders: '*'
+#                        allowedMethods: '*'
+#                        allowedOrigins: '*'
+eureka:
+    client:
+        service-url:
+            defaultZone: http://47.100.238.122:8761/eureka
+        registry-fetch-interval-seconds: 3 # 网关拉去服务列表的时间缩短
+    instance:
+        hostname: localhost
+        instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}

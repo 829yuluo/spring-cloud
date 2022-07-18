@@ -1,0 +1,54 @@
+#server:
+#    port: 8082
+#spring:
+#    application:
+#        name: nacos-config-test
+#    cloud:
+#        nacos:
+#            config:
+#                server-addr: localhost:8848
+#                username: nacos
+#                password: nacos
+#                namespace: c52e715f-3f00-4ad8-803b-9c8dba19a221 # 目前读取多配置文件的方式只支持在同一个命名空间下
+#                file-extension: yml
+#                extension-configs: # 可以读多个配置文件 需要在同一个命名空间下面 可以是不同的组
+#                    -   dataId: user-center-dev.yml
+#                        group: A_GROUP
+#                        refresh: true
+#                    -   dataId: member-center-dev.yml
+#                        group: B_GROUP
+#                        refresh: false  # 不去动态刷新配置文件
+#    profiles:
+#        active: dev
+
+
+server:
+    port: 8082
+spring:
+    application:
+        name: nacos-config-test
+    cloud:
+        nacos:
+            config:
+                server-addr: localhost:8848
+                username: nacos
+                password: nacos
+                namespace: c52e715f-3f00-4ad8-803b-9c8dba19a221 # 目前读取多配置文件的方式只支持在同一个命名空间下
+                group: A_GROUP
+                prefix: user-center
+                file-extension: yml
+                shared-configs: # 共享配置文件
+#                    - application-dev.yml  # 这里可以写共享的文件名称 只能在DEFAULT_GROUP
+                    - dataId: application-dev.yml  # 这两种写法都可以
+                      group: C_GROUP
+                      refresh: true
+
+    profiles:
+        active: dev
+
+
+# bootstrap.yml  写什么   远端的配置文件写什么?
+# 1.应用名称 spring.application.name
+# 2.nacos的注册和拉取配置文件
+
+# 远端放 端口 数据源 redis mq 能放远端的全放  因为方便管理和修改 包括自定义配置

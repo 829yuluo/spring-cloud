@@ -1,0 +1,14 @@
+server:
+    port: 8763
+spring:
+    application:
+        name: eureka-server # 应用名称不能改
+eureka:
+    client:
+        service-url:
+            defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka
+    instance: # 实例的配置
+        instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}   # 主机名称 : 应用名称 : 端口号
+        hostname: peer3  # 主机名称 或者服务的ip
+        prefer-ip-address: true # 以ip的形式显示具体的服务信息
+        lease-renewal-interval-in-seconds: 5  # 服务实例的续约的时间间隔

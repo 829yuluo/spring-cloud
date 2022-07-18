@@ -1,0 +1,41 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: customer-servie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+# \u5F00\u542FHystrix\u7684\u529F\u80FD
+# \u5728spring\u7684F\u7248\u672C\u4EE5\u524D\uFF0C\u9ED8\u8BA4\u662F\u5F00\u542F\u7684\uFF0CF\u7248\u672C\u4E4B\u540E\uFF0C\u5173\u95ED\uFF08\u56E0\u4E3A\u6709\u4E86\u5176\u4ED6\u7684\u7194\u65AD\u7EC4\u4EF6\uFF09
+feign:
+  hystrix:
+    enabled: true
+
+hystrix: #hystrix \u7684\u5168\u5C40\u63A7\u5236
+  command:
+    default:    #default \u662F\u5168\u5C40\u63A7\u5236\uFF0C\u4E5F\u53EF\u4EE5\u6362\u6210\u5355\u4E2A\u65B9\u6CD5\u63A7\u5236\uFF0C\u628A default \u6362\u6210\u65B9\u6CD5\u540D\u5373\u53EF
+      circuitBreaker:
+        enabled: true #\u5F00\u542F\u65AD\u8DEF\u5668
+        requestVolumeThreshold: 3 #\u5931\u8D25\u6B21\u6570\uFF08\u9600\u503C\uFF09
+        sleepWindowInMilliseconds: 20000 #\u7A97\u53E3\u65F6\u95F4
+        errorThresholdPercentage: 60 #\u5931\u8D25\u7387
+      fallback:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000 #\u4FE1\u53F7\u91CF\u9694\u79BB\u7EA7\u522B\u6700\u5927\u5E76\u53D1\u6570
+      execution:
+        isolation:
+          Strategy: thread #\u9694\u79BB\u65B9\u5F0Fthread\u7EBF\u7A0B\u9694\u79BB\u96C6\u5408\u548CSEMAPHORE\u4FE1\u53F7\u91CF\u9694\u79BB\u7EA7\u522B
+          thread:
+            timeoutInMilliseconds: 3000 #\u8C03\u7528\u8D85\u65F6\u65F6\u957F
+
+ribbon:
+  ReadTimeout: 5000 #\u8981\u7ED3\u5408feign\u7684\u5E95\u5C42ribbon\u8C03\u7528\u7684\u65F6\u957F
+  ConnectTimeout: 5000
+

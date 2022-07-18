@@ -1,0 +1,17 @@
+server:
+    port: 10086   # 端口号范围   0-65535
+spring:
+    application:
+        name: admin-server
+eureka:
+    client:
+        service-url:
+            defaultZone: http://47.100.238.122:8761/eureka
+    instance:
+        hostname: localhost
+        instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'  # 暴露所有的监控端点 # 如果一个服务需要被监控 那么就要讲自身的一些情况(一些信息接口)暴露出去

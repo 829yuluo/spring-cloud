@@ -1,0 +1,13 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: rent-car-service
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

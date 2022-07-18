@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/01-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/02-eureka-client-a/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/02-eureka-client-b/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/01-eureka-server-b/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/01-eureka-server-c/pom.xml" />
+        <option value="$PROJECT_DIR$/01-eureka/03-rest-template/pom.xml" />
+        <option value="$PROJECT_DIR$/02-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/02-ribbon/01-provider-a/pom.xml" />
+        <option value="$PROJECT_DIR$/02-ribbon/01-provider-b/pom.xml" />
+        <option value="$PROJECT_DIR$/02-ribbon/02-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/03-openfeign/pom.xml" />
+        <option value="$PROJECT_DIR$/03-openfeign/01-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/03-openfeign/02-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/04-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/04-hystrix/01-customer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/04-hystrix/02-rent-car-service/pom.xml" />
+        <option value="$PROJECT_DIR$/04-hystrix/03-Myfish/pom.xml" />
+        <option value="$PROJECT_DIR$/04-hystrix/04-feign-project/pom.xml" />
+        <option value="$PROJECT_DIR$/05-admin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/06-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/06-gateway/02-login-service/pom.xml" />
+        <option value="$PROJECT_DIR$/06-gateway/01-gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/06-gateway/03-teacher-service/pom.xml" />
+        <option value="$PROJECT_DIR$/07-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/07-nacos/01-nacos-client-a/pom.xml" />
+        <option value="$PROJECT_DIR$/07-nacos/02-nacos-client-b/pom.xml" />
+        <option value="$PROJECT_DIR$/07-nacos/03-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/07-nacos/04-nacos-config-a/pom.xml" />
+        <option value="$PROJECT_DIR$/07-nacos/05-nacos-config-test/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

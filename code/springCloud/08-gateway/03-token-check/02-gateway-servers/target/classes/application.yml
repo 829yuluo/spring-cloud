@@ -1,0 +1,40 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: gateway-servers
+
+  # redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: "082916"
+    database: 0
+
+  cloud:
+    gateway:
+
+#      非动态路由配置
+#      enabled: true
+#      routes:
+#        - id: login-service-route
+#          uri: http://localhost:8080
+#          predicates:
+#            - Path=/doLogin
+
+#      动态路由配置
+      discovery:
+        locator:
+          enabled: true   # 开启动态路由
+          lower-case-service-id: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    registry-fetch-interval-seconds: 3
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}

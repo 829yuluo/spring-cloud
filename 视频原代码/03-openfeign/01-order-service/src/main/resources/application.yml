@@ -1,0 +1,9 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: order-service
+eureka:
+    client:
+        service-url:
+            defaultZone: http://47.100.238.122:8761/eureka

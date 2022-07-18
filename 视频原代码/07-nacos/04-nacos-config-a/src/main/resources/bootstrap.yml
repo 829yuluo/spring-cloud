@@ -1,0 +1,16 @@
+server:
+    port: 8081
+spring:
+    application:
+        name: nacos-config-a
+# 项目在启动的时候去哪里找它对应的配置文件呢??
+    cloud:
+        nacos:
+            config:
+                server-addr: localhost:8848
+                username: nacos
+                password: nacos
+                prefix: nacos-config  # 读哪个配置文件 默认用的是应用名称  是可以修改的
+                file-extension: yml  # 文件类型
+    profiles:
+        active: dev
